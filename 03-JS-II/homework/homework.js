@@ -92,7 +92,7 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero === 10 || === 5; 
+  return numero === 10 || numero === 5; 
 }
 
 function estaEnRango(numero) {
@@ -119,10 +119,10 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-   if(numero % 15 === 0) return "fizzbuzz";
-   if(numero % 3 === 0) return "fizz";
-   if(numero % 5 === 0) return "buzz";
-   return "numero";
+   if(numero % 15 === 0) return 'fizzbuzz';
+   if(numero % 3 === 0) return 'fizz';
+   if(numero % 5 === 0) return 'buzz';
+   return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -133,19 +133,21 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 
-  if( num1 < 0 || num2 < 0 || num3 < 0) {
-    return " Hay negativos";
+  if(num1 < 0 || num2 < 0 || num3 < 0) {
+    return "Hay negativos";
+  }
+  else if(num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
   }
   else if(num1 > 0 && num1 > num2 && num1 > num3) {
     return "Número 1 es mayor y positivo";
   }
-  
-    else if(num3 > num1 && num3 > num2) {
-      return "num3 + 1";
-    }
-    else {
-      return false;
-    }
+  else if(num3 > num1 && num3 > num2) {
+    return num3 + 1;
+  }
+  else {
+    return false;
+  }
 }
 
 function esPrimo(numero) {
@@ -207,8 +209,8 @@ function doWhile(numero) {
   var a = numero;
   var i = 0;
     do {
-      i + i = 1;
-      a + a = 0;
+      i = i + 1;
+      a = a + 5;
 
     }
     while(i < 8);
