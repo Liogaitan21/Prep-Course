@@ -48,14 +48,16 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
 
   }
 
-}
+
 
 function eliminarPropiedad (objeto, unaPropiedad) {
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código: 
-  delete objeto[propiedad];
+  
+  delete objeto[unaPropiedad];
+
   return objeto;
 }
 
@@ -75,7 +77,7 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-    if(usuario[email]){
+    if(usuario['email']){
       return true;
     } else{
       return false; 
@@ -144,19 +146,16 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
-    var usuario = {
-          posts: [{
-        likes: 4
-      }]
-    };
     var suma = 0;
-      for(var i = 0; i <usuario.posts.length; i++) {
-        suma = suma + usuario.post[i].likes;
-      }
-
+    
+    for(var i = 0; i < usuario.posts.length; i++) {
+      suma = suma + usuario.posts[i].likes;
+    }
+  
     return suma;
       
     }
+  
 
 function agregarMetodoCalculoDescuento (producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
@@ -169,11 +168,7 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-    var product = {
-       precio: 10,
-       porcentajeDeDescuento: 5,
-       calcularPrecioDescuento:
-    };
+   
     producto.calcularPrecioDescuento = function() {
       return this.precio - ( this.precio * this.porcentajeDeDescuento );
     };
