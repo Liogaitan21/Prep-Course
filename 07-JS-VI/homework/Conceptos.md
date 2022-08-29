@@ -1,0 +1,1 @@
+Funcion Callback: Es una función que se usa para propagar el resultado de una operación esta función callback se para como parametro a otra función, y es llamada con un resultado. Cuando la función complete su operación.
