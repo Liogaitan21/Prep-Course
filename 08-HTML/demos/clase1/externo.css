@@ -10,3 +10,14 @@ p {
 .amarillo {
   color: yellow;
 }
+#ThirDiv {
+  height: 600 px;
+  width: 500 px;
+  background-color:cadetblue cadetblue;
+  padding: 50 px;
+  border: 5 px solid lightgreen lightgreen;
+}
+#spanId{
+  font-size: 18px;
+  margin: 50px;
+}
